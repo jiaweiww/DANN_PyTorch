@@ -18,10 +18,10 @@ if __name__ == '__main__':
     svhn_dataset = torchvision.datasets.SVHN(root=cfg.fake_sources_path,
                                              transform=torchvision.transforms.ToTensor(),
                                              download=True)
-    mnist_train_dataset = torchvision.datasets.MNIST(root=cfg.real_sources_path+'\\train', train=True,
+    mnist_train_dataset = torchvision.datasets.MNIST(root=os.path.join(cfg.real_sources_path, 'train'), train=True,
                                                      transform=torchvision.transforms.ToTensor(),
                                                      download=True)
-    mnist_test_dataset = torchvision.datasets.MNIST(root=cfg.real_sources_path+'\\test', train=False,
+    mnist_test_dataset = torchvision.datasets.MNIST(root=os.path.join(cfg.real_sources_path, 'test'), train=False,
                                                     transform=torchvision.transforms.ToTensor(),
                                                     download=True)
 
